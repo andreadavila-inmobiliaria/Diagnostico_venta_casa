@@ -521,7 +521,7 @@ const reportUrl = (tipoId, a) => baseUrl() + '#diagnostico-' + encode(tipoId, a)
 
 function waMessage(nombre, tipoId, zona, a){
   const tipo = TIPOS.find(t => t.id===tipoId);
-  return `¡Hola${nombre?', '+nombre:''}! Soy Andrea Dávila, asesora inmobiliaria online asociada a NOOW. Ya he analizado tu caso y aquí tienes el diagnóstico de tu ${tipo.noun}${zona?' en '+zona:''}:\n${reportUrl(tipoId, a)}\n\nVerás tu índice de preparación, lo que más está frenando la venta y los pasos que te recomiendo, por orden.\n\nCuando lo leas, ¿te parece que hagamos una videollamada de 20 minutos, sin compromiso, y te cuento cómo he realizado el informe?`;
+  return `¡Hola${nombre?', '+nombre:''}! Soy Andrea Dávila, asesora inmobiliaria online asociada a NOOW. Aquí tienes el diagnóstico de tu ${tipo.noun}${zona?' en '+zona:''}, basado en las opciones que has marcado en el test:\n${reportUrl(tipoId, a)}\n\nVerás tu índice de preparación, lo que más está frenando la venta y los pasos que te recomiendo, por orden.\n\nEn las próximas horas te llamaré desde este número para ayudarte con tu caso. ¡Hablamos pronto!`;
 }
 
 /* ---------- Piezas comunes ---------- */
